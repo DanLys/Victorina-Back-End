@@ -3,7 +3,6 @@ package org.victorina.data_entities.task_answers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.victorina.dto.TaskAnswersDTO;
-import org.victorina.dto.TaskDTO;
 import org.victorina.mapper.TaskAnswersMapper;
 
 import java.util.List;

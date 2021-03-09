@@ -1,5 +1,6 @@
 package org.victorina.data_entities.task_preview;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.victorina.data_entities.AbstractEntity;
 import org.victorina.dto.TaskPreviewDTO;
@@ -19,6 +20,7 @@ public class TaskPreviewService {
     private final TaskPreviewRepository taskPreviewRepository;
     private final TaskPreviewMapper taskPreviewMapper;
 
+    @Autowired
     public TaskPreviewService(final TaskPreviewRepository taskPreviewRepository,
                               final TaskPreviewMapper taskPreviewMapper) {
         this.taskPreviewRepository = taskPreviewRepository;

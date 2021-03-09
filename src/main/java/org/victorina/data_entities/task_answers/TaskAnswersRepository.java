@@ -1,7 +1,6 @@
 package org.victorina.data_entities.task_answers;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.victorina.dto.TaskDTO;
 
 import java.util.Optional;
 

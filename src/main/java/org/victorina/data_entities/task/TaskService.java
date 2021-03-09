@@ -1,5 +1,6 @@
 package org.victorina.data_entities.task;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.victorina.dto.TaskDTO;
 import org.victorina.mapper.TaskMapper;
@@ -15,6 +16,7 @@ public class TaskService {
     private final TaskRepository taskRepository;
     private final TaskMapper taskMapper;
 
+    @Autowired
     public TaskService(final TaskRepository taskRepository,
                        final TaskMapper taskMapper) {
         this.taskRepository = taskRepository;
