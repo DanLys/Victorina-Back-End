@@ -39,7 +39,7 @@ public class TaskAnswersService {
      * @param id id вопроса.
      * @return Варианты ответа на вопрос {@link TaskAnswersDTO}
      */
-    public List<TaskAnswersDTO> findByTask(Long id) {
+    public List<TaskAnswersDTO> findByTaskId(Long id) {
         return taskAnswersRepository.findAllTaskAnswersByTaskId(id).stream()
                 .map(taskAnswersMapper::toDto).collect(Collectors.toList());
     }
