@@ -1,11 +1,11 @@
 package org.victorina.data_entities.task_answers;
 
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.victorina.dto.TaskAnswersDTO;
-import org.victorina.dto.TaskDTO;
 
 import java.util.List;
 
@@ -18,6 +18,7 @@ public class TaskAnswersController {
 
     private final TaskAnswersService taskAnswersService;
 
+    @Autowired
     public TaskAnswersController(final TaskAnswersService taskAnswersService) {
         this.taskAnswersService = taskAnswersService;
     }

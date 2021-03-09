@@ -39,7 +39,7 @@ public class TaskPreviewService {
      * Номера необходимых представлений.
      * @return представление набора заданий {@link TaskPreviewDTO}
      */
-    public List<TaskPreviewDTO> findByTask(Long from, Long to) {
+    public List<TaskPreviewDTO> findByIndex(Long from, Long to) {
         List<TaskPreviewDTO> previews = taskPreviewRepository.findAll().stream()
                 .sorted(Comparator.comparing(AbstractEntity::getId))
                 .map(taskPreviewMapper::toDto).collect(Collectors.toList());
