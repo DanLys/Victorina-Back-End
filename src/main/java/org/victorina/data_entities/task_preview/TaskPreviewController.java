@@ -1,10 +1,12 @@
 package org.victorina.data_entities.task_preview;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.victorina.config.SpringFoxConfig;
 import org.victorina.dto.TaskPreviewDTO;
 
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.List;
  */
 
 @RestController
+@Api(tags = {SpringFoxConfig.TASK_PREVIEW})
 public class TaskPreviewController {
 
     private final TaskPreviewService taskPreviewService;
