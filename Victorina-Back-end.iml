@@ -146,9 +146,6 @@
     <orderEntry type="library" name="Maven: com.sun.mail:jakarta.mail:1.6.5" level="project" />
     <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.postgresql:postgresql:42.2.10" level="project" />
-    <orderEntry type="library" name="Maven: org.liquibase:liquibase-core:4.1.0" level="project" />
-    <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
-    <orderEntry type="library" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:3.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-spi:3.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-schema:3.0.0-SNAPSHOT" level="project" />

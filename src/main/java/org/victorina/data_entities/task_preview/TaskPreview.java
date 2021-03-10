@@ -46,7 +46,7 @@ public class TaskPreview extends AbstractEntity {
     /**
      * Набор заданий.
      */
-    @OneToMany(mappedBy = "task_preview", fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "taskPreview", fetch = FetchType.LAZY, orphanRemoval = true)
     public Set<Task> getTasks() {
         return tasks;
     }
