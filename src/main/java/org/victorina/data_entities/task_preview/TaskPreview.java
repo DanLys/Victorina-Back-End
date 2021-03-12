@@ -26,6 +26,7 @@ public class TaskPreview extends AbstractEntity {
     private String name;
     private Long hardLevel;
     private Set<Task> tasks = new HashSet<>();
+    private Long countOfTasks;
 
     /**
      * Имя набора заданий.
@@ -49,5 +50,13 @@ public class TaskPreview extends AbstractEntity {
     @OneToMany(mappedBy = "taskPreview", fetch = FetchType.LAZY, orphanRemoval = true)
     public Set<Task> getTasks() {
         return tasks;
+    }
+
+    /**
+     * Количество заданий
+     */
+    @Column(name = "count")
+    public Long getCountOfTasks() {
+        return countOfTasks;
     }
 }

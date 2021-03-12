@@ -1,5 +1,6 @@
 package org.victorina.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -40,5 +41,12 @@ public class TaskPreviewDTO extends AbstractDTO {
             value = "Task questions",
             dataType = "Set of questions"
     )
+    @JsonIgnore
     private Set<Long> tasks = new HashSet<>();
+
+    @ApiModelProperty(
+            value = "Count of tasks",
+            dataType = "Long"
+    )
+    private Long countOfTasks;
 }
