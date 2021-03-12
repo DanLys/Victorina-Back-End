@@ -3,6 +3,7 @@ package org.victorina.data_entities.task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.victorina.dto.TaskDTO;
+import org.victorina.exceptions.task.ApiTaskNotFoundException;
 import org.victorina.mapper.TaskMapper;
 
 import java.util.Optional;
@@ -43,7 +44,7 @@ public class TaskService {
             return taskMapper.toDto(op.get());
         }
 
-        throw new RuntimeException("No");
+        throw new ApiTaskNotFoundException(String.format("Task with id: %d not found", id));
     }
 
     /**
