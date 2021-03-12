@@ -35,12 +35,13 @@ public class TaskController {
         return ResponseEntity.ok(taskService.save(taskDTO));
     }
 
-    @ApiOperation(value = "Find task by id",
-            notes = "Find task by id",
+    @ApiOperation(value = "Find task",
+            notes = "Find task by task preview id and task index",
             response = TaskDTO.class)
-    @RequestMapping(value = "api/task/find/{id}", method = RequestMethod.GET)
-    public ResponseEntity<TaskDTO> findTaskById(@PathVariable("id") final Long id) {
-        return ResponseEntity.ok(taskService.findById(id));
+    @RequestMapping(value = "api/task/find/{index}/{id}", method = RequestMethod.GET)
+    public ResponseEntity<TaskDTO> findTaskById(@PathVariable("index") final int index,
+                                                @PathVariable("id") final Long id) {
+        return ResponseEntity.ok(taskService.findByIndexAndId(index, id));
     }
 
     @ApiOperation(value = "Delete task by id",
