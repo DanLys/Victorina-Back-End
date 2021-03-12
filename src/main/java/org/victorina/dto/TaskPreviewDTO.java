@@ -26,7 +26,6 @@ public class TaskPreviewDTO extends AbstractDTO {
             dataType = "String",
             accessMode = ApiModelProperty.AccessMode.READ_ONLY
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String name;
 
     @ApiModelProperty(
@@ -34,7 +33,6 @@ public class TaskPreviewDTO extends AbstractDTO {
             dataType = "Long",
             accessMode = ApiModelProperty.AccessMode.READ_ONLY
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long hardLevel;
 
     @ApiModelProperty(

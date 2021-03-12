@@ -58,10 +58,10 @@ public class TaskPreviewService {
     }
 
     /**
-     * Получение количества представлений.
-     * @return количество представлений {@link Long}
+     * Получение представлений.
+     * @return представления {@link TaskPreviewDTO}
      */
-    public Long getCountTaskPreview() {
-        return taskPreviewRepository.count();
+    public List<TaskPreviewDTO> getAllTaskPreview() {
+        return taskPreviewRepository.findAll().stream().map(taskPreviewMapper::toDto).collect(Collectors.toList());
     }
 }

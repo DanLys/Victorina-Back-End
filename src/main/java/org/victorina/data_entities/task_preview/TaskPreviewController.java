@@ -2,6 +2,7 @@ package org.victorina.data_entities.task_preview;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.List;
  * Created by Danil Lyskin at 18:34 09.03.2021
  */
 
+@Slf4j
 @RestController
 @Api(tags = {SpringFoxConfig.TASK_PREVIEW})
 public class TaskPreviewController {
@@ -35,12 +37,6 @@ public class TaskPreviewController {
         return ResponseEntity.ok(taskPreviewService.save(taskPreviewDTO));
     }
 
-    @RequestMapping(value = "api/task/preview/find/{from}/{to}", method = RequestMethod.GET)
-    public ResponseEntity<List<TaskPreviewDTO>> findAllByIndex(@PathVariable("from") final Long from,
-                                                               @PathVariable("to") final Long to) {
-        return ResponseEntity.ok(taskPreviewService.findByIndex(from, to));
-    }
-
     @ApiOperation(value = "Delete task preview by id",
             notes = "Delete task preview by id")
     @RequestMapping(value = "api/task/preview/delete/{id}", method = RequestMethod.DELETE)
@@ -51,8 +47,9 @@ public class TaskPreviewController {
 
     @ApiOperation(value = "Get count of task preview",
             notes = "Count task preview")
-    @RequestMapping(value = "api/task/preview/count", method = RequestMethod.GET)
-    public ResponseEntity<Long> getCountTaskPreview() {
-        return ResponseEntity.ok(taskPreviewService.getCountTaskPreview());
+    @RequestMapping(value = "api/task/preview/get", method = RequestMethod.GET)
+    public ResponseEntity<List<TaskPreviewDTO>> getCountTaskPreview() {
+        log.info("Getting previews");
+        return ResponseEntity.ok(taskPreviewService.getAllTaskPreview());
     }
 }
