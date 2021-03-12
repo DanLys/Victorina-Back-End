@@ -19,26 +19,20 @@ public class TaskDTO extends AbstractDTO {
 
     @ApiModelProperty(
             value = "Task name",
-            dataType = "String",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "String"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String name;
 
     @ApiModelProperty(
             value = "Task descriptions",
-            dataType = "String",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "String"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String descriptions;
 
     @ApiModelProperty(
             value = "Task name",
-            dataType = "Enum",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "Enum"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private TaskType type;
 
     @ApiModelProperty(
@@ -49,17 +43,13 @@ public class TaskDTO extends AbstractDTO {
 
     @ApiModelProperty(
             value = "Flag of count answers",
-            dataType = "Boolean",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "Boolean"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Boolean flagOfCountAnswers;
 
     @ApiModelProperty(
             value = "TaskPreview",
-            dataType = "Long",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "Long"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long taskPreviewId;
 }

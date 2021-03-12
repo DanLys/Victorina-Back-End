@@ -23,15 +23,13 @@ public class TaskPreviewDTO extends AbstractDTO {
 
     @ApiModelProperty(
             value = "Task name",
-            dataType = "String",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "String"
     )
     private String name;
 
     @ApiModelProperty(
             value = "Task hard level",
-            dataType = "Long",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "Long"
     )
     private Long hardLevel;
 

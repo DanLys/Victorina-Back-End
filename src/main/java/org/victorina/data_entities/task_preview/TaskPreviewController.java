@@ -48,7 +48,7 @@ public class TaskPreviewController {
     @ApiOperation(value = "Get count of task preview",
             notes = "Count task preview")
     @RequestMapping(value = "api/task/preview/get", method = RequestMethod.GET)
-    public ResponseEntity<List<TaskPreviewDTO>> getCountTaskPreview() {
+    public ResponseEntity<List<TaskPreviewDTO>> getAllTaskPreview() {
         log.info("Getting previews");
         return ResponseEntity.ok(taskPreviewService.getAllTaskPreview());
     }
