@@ -48,4 +48,11 @@ public class TaskPreviewController {
         taskPreviewService.deleteById(id);
         return ResponseEntity.ok("{}");
     }
+
+    @ApiOperation(value = "Get count of task preview",
+            notes = "Count task preview")
+    @RequestMapping(value = "api/task/preview/count", method = RequestMethod.GET)
+    public ResponseEntity<Long> getCountTaskPreview() {
+        return ResponseEntity.ok(taskPreviewService.getCountTaskPreview());
+    }
 }

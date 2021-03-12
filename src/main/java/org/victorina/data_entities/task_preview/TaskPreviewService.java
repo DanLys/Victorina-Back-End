@@ -56,4 +56,12 @@ public class TaskPreviewService {
     public void deleteById(Long id) {
         taskPreviewRepository.deleteById(id);
     }
+
+    /**
+     * Получение количества представлений.
+     * @return количество представлений {@link Long}
+     */
+    public Long getCountTaskPreview() {
+        return taskPreviewRepository.count();
+    }
 }
