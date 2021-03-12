@@ -16,25 +16,19 @@ public class TaskAnswersDTO extends AbstractDTO {
 
     @ApiModelProperty(
             value = "Task answer",
-            dataType = "String",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "String"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String answer;
 
     @ApiModelProperty(
             value = "Flag for true/false answer",
-            dataType = "Boolean",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "Boolean"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Boolean isTrue;
 
     @ApiModelProperty(
             value = "Task",
-            dataType = "Long",
-            accessMode = ApiModelProperty.AccessMode.READ_ONLY
+            dataType = "Long"
     )
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long taskId;
 }
